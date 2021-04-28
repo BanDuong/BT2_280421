@@ -3,7 +3,7 @@ import mysql.connector as mc
 from sqlalchemy import create_engine
 
 MYSQL_USER 		= 'root'
-MYSQL_PASSWORD 	= 'lovestory'
+MYSQL_PASSWORD 	= 'lovestory99'
 MYSQL_HOST_IP 	= '127.0.0.1'
 MYSQL_PORT		= '3306'
 MYSQL_DATABASE	= 'customers'
@@ -33,4 +33,5 @@ cus_list = pandas.read_csv("customer.csv")
 engine = create_engine('mysql+mysqlconnector://'+MYSQL_USER+':'+MYSQL_PASSWORD+'@'+MYSQL_HOST_IP+':'+MYSQL_PORT+'/'+MYSQL_DATABASE, echo=False)
 
 #cus_list.to_sql(name='cusinfor',con=engine,if_exists='replace',index=False)
-print(engine.execute("SELECT * FROM customers.cusInfor").fetchall())
+#print(engine.execute("SELECT * FROM customers.cusInfor").fetchall())
+print(pandas.read_csv("customer.csv").head())
